@@ -11,7 +11,7 @@ https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/data/some2
 
 ### Load csv filen in docker container
     
-* docker cp csvfile.csv neo4j:/var/lib/neo4j/import.
+* docker cp some2016UKgeotweets.csv neo4j:/var/lib/neo4j/import.
 
 ### Access to our database in this browser
 
@@ -35,6 +35,8 @@ Some of the columns in the csv file we have to use>
 ## Exercise 2
 * Use the mentions list of each tweet to create a new set of nodes labeled "Tweeters", whith a "Mentions" relation.
 * Create a relation "Tweeted" between Tweeters and Tweet.
+
+It is not done!
 
 ## Exercise 3
 * Find the top 10 list of tweeters whose tweets are the furtherst apart.
