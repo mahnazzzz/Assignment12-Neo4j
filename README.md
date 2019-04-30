@@ -5,7 +5,7 @@ This assignment is about the analysis of twitter data from the British Islands.
 I have downloaded data from here: 
 https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/data/some2016UKgeotweets.csv.zip
 
-You can find task description (here)[https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md]
+You can find task description [here](https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md)
 
 ### Make a docker container and load now4j image 
 
