@@ -28,6 +28,24 @@ LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row
 return row
 LIMIT 1
 ```
+```
+LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row 
+    FIELDTERMINATOR ";"
+CREATE (tweet:Tweet {
+    username: row.`User Name`,
+    nickname: row.Nickname,
+    location: row.`Place (as appears on Bio)`,
+    lat: row.Latitude,
+    long: row.Longitude,
+    content: row.`Tweet content`,
+    mentions: extract( m in 
+                filter(m in split(row.`Tweet content`," ") where m starts with "@" and size(m) > 1) 
+                | right(m,size(m)-1))
+               
+})
+
+
+```
 
 Some of the columns in the csv file we have to use>
 "User Name", "Nickname","Place (as appears on Bio)", "Latitude", "Longitude" and "Tweet content"
