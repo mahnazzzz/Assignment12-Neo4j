@@ -32,6 +32,7 @@ LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row
 return row
 LIMIT 1
 ```
+
 ```
 LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row 
     FIELDTERMINATOR ";"
