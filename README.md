@@ -11,9 +11,12 @@ You can find task description [here](https://github.com/datsoftlyngby/soft2019sp
 
 * docker run \ -d --name neo4j \ --rm \ --publish=7474:7474 \ --publish=7687:7687 \ --env NEO4J_AUTH=neo4j/123 \ neo4j
 
+123 is the kode for our neo4j in container!
+
 ### Load csv filen in docker container
     
 * docker cp some2016UKgeotweets.csv neo4j:/var/lib/neo4j/import.
+
 
 ### Access to our database in this browser
 
@@ -21,6 +24,7 @@ You can find task description [here](https://github.com/datsoftlyngby/soft2019sp
 
 ## Exercise 1
 If you give your neo4j docker container this flag '-v $(pwd):/var/lib/neo4j/import', you should be able to load the data using this query:
+
 
 ```cypher
 LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row 
